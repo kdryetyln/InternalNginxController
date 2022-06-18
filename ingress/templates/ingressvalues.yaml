@@ -1,0 +1,11 @@
+controller:
+  nodeSelector:
+    agentpool: <your-nodepool-selector>
+  service:
+    loadBalancerIP: <IP>
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+      service.beta.kubernetes.io/azure-load-balancer-internal-subnet: <node-pool-subnet-name>
+defaultBackend:
+  nodeSelector:
+    agentpool: <your-nodepool-selector>
